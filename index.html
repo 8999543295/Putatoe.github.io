@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Putatoe</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <style>
+            body
+            {
+                background-color: whitesmoke;
+            }
+            header
+             {
+                background-color: #317a8c;
+                display: grid;
+                
+                height: 110px;
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            .add
+            {
+                background-color: #317a8c;
+                color: white;
+                border-color: white;
+                border-radius: 15px;
+                width: 700px;
+            }
+            .search
+            {
+                border-radius: 9px;
+                border: none;
+                width: 720px;
+                height: 40px;
+            }
+           header i
+           {
+            padding-left: 10px;
+            font-size: 20px;
+            
+           }
+           header div
+           {
+            padding-top: 10px;
+           }
+           header button
+           {
+            height: 40px;
+            width: 100px;
+            border: none;
+            background-color: white;
+            color: black;
+           }
+           .Mcard
+           {
+            width: 99.75%;
+            height: 500px;
+            box-shadow: 2px 2px 2px gray;
+            border: none;
+            border-radius: 15px;
+            margin-top: 10px;
+            background-color: white;
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            align-items: center; 
+            color: #317a8c;
+            text-align: center;
+           }
+           .Mcard div i
+           {
+            font-size: 80px;
+            
+           }
+           .Container .card
+           {
+            width: 200px;
+            height: 250px;
+            margin-top: 30px;
+            align-items: center;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            box-shadow: 2px 2px 2px gray;
+           }
+           .Container .card:hover
+        {
+            transform: scale(1.1);
+        }
+           .Container
+           {
+            display: flex;
+            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            margin-left: 200px;
+            margin-right: 200px;
+           }
+           .h1
+           {
+            background-color: #84d3e6;
+            color: #317a8c;
+            height: 50px;
+            width: 1100px;
+            text-align: center;
+            align-items: center;
+            
+            margin-top: 30px;
+            margin-left: 200px;
+           }
+           h3
+           {
+            text-align: center;
+            color: rgb(165, 158, 132);
+           }
+           hr
+           {
+            margin-left: 300px;
+            margin-right: 300px;
+            
+           }
+          .Services
+          {
+            margin-bottom: 130px;
+          }
+          .Services .card
+          {
+            height: 190px;
+            width: 210px;
+            background-image: url(consultancy.png);
+            margin-left: 200px;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            text-shadow: 5px 5px 5px black;
+            padding-top: 120px;
+          }
+          .footer 
+          {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            color: #317a8c;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 100px;
+            padding-right: 100px;
+            font-size: 20px;
+            text-align: center;
+            
+          }
+          .footer i
+          {
+            font-size: 50px;
+            text-shadow: 5px 5px 5px gray;
+          }
+          
+          @media screen and (orientation: portrait) 
+          {
+            body{
+                display: none;
+            }
+          }
+        </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="MLOGO.png" width="200px" height="60px">
+        </div>
+        <div>
+          <div>
+            <i class="bi bi-geo-alt-fill"></i>
+            <input class="add"type="text" placeholder="Enter Your Address">
+            <i class="bi bi-bell-fill"></i>
+            <i class="bi bi-cart-plus"></i>
+          </div>
+          <div>
+            <i class="bi bi-search"></i>
+            <input class="search" type="text" placeholder=" search product..">
+            <i class="bi bi-mic-fill"></i>
+          </div>
+        </div>
+        <div>
+            <button>Login</button>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div id="topBanner" class="carousel slide carousel-dark" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="1000">
+                    <img src="refer.jpg" class="w-100 d-block">
+                </div>
+
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="wrong.png" class="w-100 d-block">
+                </div>
+            
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="loan.jpg" class="w-100 d-block">
+                </div>
+            </div>
+            <button data-bs-slide="prev" data-bs-target="#topBanner" class="carousel-control-prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-slide="next" data-bs-target="#topBanner" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button class="active" data-bs-slide-to="0" data-bs-target="#topBanner"></button>
+                <button data-bs-slide-to="1" data-bs-target="#topBanner"></button>
+                <button data-bs-slide-to="2" data-bs-target="#topBanner"></button>
+                
+            </div>
+        </div>
+    </div>
+
+        <div class="Mcard">
+            <div>
+                <i class="bi bi-phone"></i>
+                <div>Prepaid mobile Recharge</div>
+            </div>
+            <div>
+                <i class="bi bi-tv"></i>
+                <div>DTH TV Recharge</div>
+            </div>
+            <div>
+                <i class="bi bi-currency-rupee"></i>
+                <div>loans</div>
+            </div>
+            <div>
+                <i class="bi bi-volume-up"></i>
+                <div>Promotions</div>
+            </div>
+            <div>
+                <i class="bi bi-newspaper"></i>
+                <div>News</div>
+            </div>
+            <div>
+                <i class="bi bi-chat-left"></i>
+                <div>Blog</div>
+            </div>
+            <div>
+                <i class="bi bi-people"></i>
+                <div>Jobs</div>
+            </div>
+            <div>
+                <i class="bi bi-chat-left-text"></i>
+                <div>Anonymous Feedback</div>
+            </div>
+            <div>
+                <i class="bi bi-fire"></i>
+                <div>Gas Booking</div>
+            </div>
+            <div>
+                <i class="bi bi-lightbulb"></i>
+                <div>Electric Bill</div>
+            </div>
+            <div>
+                <i class="bi bi-droplet"></i>
+                <div>Whater Bil</div>
+            </div>
+            <div>
+                <i class="bi bi-arrow-right-circle-fill"></i>
+                <div>Next</div>
+            </div>
+        </div>
+        <div>
+           <div class="h1">
+               <h2>Popular Service Product</h2>
+           </div>
+           <h3>Consultancy</h3>
+           <hr>
+           <div class="Container">
+           <div class="card">
+            <img src="Public company.webp" height="170px" width="150px">
+            incorporetion of public company
+            </div>
+           <div class="card">
+            <img src="Privet Company.jpg" height="170px" width="150px">
+            incorporetion of privet company
+           </div>
+           <div class="card">
+            <img src="Nidhi company.jpg" height="170px" width="150px">
+            incorporetion of Nidhi company
+           </div>
+           <div class="card">
+            <img src="Producer Company.jpg" height="170px" width="150px">
+            incorporetion of Producer
+           </div>
+           <div class="card">
+            <img src="APERA Registretion.png" height="170px" width="150px">
+            APERA Registratio
+           </div>
+           <div class="card">
+            <img src="Startup-India-Registration.png" height="170px" width="150px">
+            Startup India Registration
+           </div>
+           <div class="card">
+            <img src="MSME Registration.jpg" height="170px" width="150px">
+            MSME Registration
+           </div>
+           <div class="card">
+            <img src="GST Registration.jpg" height="170px" width="150px">
+            GST Registration
+           </div>
+           <div class="card">
+            <img src="gst-retrun-filing.jpg" height="170px" width="150px">
+            GST Retrun Filing
+           </div>
+           <div class="card">
+            <img src="NGO Registration.jpg" height="170px" width="150px">
+            NGO's Registration
+           </div>
+           <div class="card">
+            <img src="Sec80G and Sec12AA registration.jpg" height="170px" width="150px">
+            Sec80G and Sec12AA registration
+           </div>
+           <div class="card">
+            <img src="PSARA Registration.jpg" height="170px" width="150px">
+            PSARA Registration
+           </div>
+           <div class="card">
+            <img src="Import Export Code.png" height="170px" width="150px">
+            Import Export Code.png
+           </div>
+           <div class="card">
+            <img src="ISO Certificate.png" height="170px" width="150px">
+            ISO Certificate
+           </div>
+           <div class="card">
+            <img src="Privet Company Annual.png" height="170px" width="150px">
+            Privet Company Annual
+           </div>
+           <div class="card">
+            <img src="Public Limited Company Annual.jpeg" height="170px" width="150px">
+            Public Limited Company Annual
+           </div>
+           <div class="card">
+            <img src="Nidhi company Annual.jpg" height="170px" width="150px">
+            Nidhi company Annual.jpg
+           </div>
+           <div class="card">
+            <img src="Privet Company Annual.png" height="170px" width="150px">
+            Privet Company Annual
+           </div>
+           <div class="card">
+            <img src="Company Strike Off.jpg" height="170px" width="150px">
+            Company Strike Off
+           </div>
+        </div>
+        </div>
+
+        <div>
+            <div class="h1">
+                <h2>All Popular Service Providers</h2>
+            </div>
+            <h3>Consultancy</h3>
+            <hr>
+            <div class="Container">
+                <div class="card">
+                 <img src="Consulting.jpg" height="170px" width="150px">
+                 Corporeted Rasta Counsuling LLP
+                 </div>
+            </div>
+        </div>
+
+        <div class="Services">
+        <div class="h1">
+            <h2>All Popular Service Providers</h2>
+        </div>
+        <div class="card">
+            Consultancy
+        </div>
+        </div>
+
+        <div class="footer">
+            <div>
+            <i class="bi bi-house-door-fill"></i>
+            <div>Home</div>
+            </div>
+            <div>
+                <i class="bi bi-person-fill"></i>
+                <div>Profile</div>
+                
+            </div>
+            <div>
+                <img src="Logo.png" width="130px" height70px>
+                
+            </div>
+            <div>
+                <i class="bi bi-card-list"></i>
+                <div>Follow List</div>
+            </div><div>
+                <i class="bi bi-chat-dots"></i>
+                <div>Chat</div>
+            </div>
+        </div>
+        <script src="./node_modules/jquery/dist/jquery.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
